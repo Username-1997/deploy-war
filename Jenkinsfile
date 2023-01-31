@@ -3,8 +3,7 @@ pipeline {
     
    tools { 
         maven 'MAVEN_HOME' 
-        
-    }
+         }
     stages {
         
         stage('clone repo and clean it') { 
