@@ -5,16 +5,15 @@ pipeline {
         maven 'mvn' 
         
     }
-    
     stages {
         
         stage('clone repo and clean it') { 
             steps {
-                bat "rmdir deploy-war /s /q"
-                bat "https://github.com/Username-1997/deploy-war.git"
+                
+                 bat "https://github.com/Username-1997/deploy-war.git"
                  bat "mvn clean -f deploy-war"
             }
-        }
+        
         post{
                 success{
                     echo "Archiving the Artifacts"
